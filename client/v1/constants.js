@@ -39,6 +39,8 @@ const ROUTES = {
     followersFeed: 'friendships/<%= id %>/followers/<%= maxId ? ("?max_id=" + maxId) : "" %>',
     savedFeed: 'feed/saved/<%= maxId ? ("?max_id=" + maxId) : "" %>',
     userTagsFeed: 'usertags/<%= user_id %>/feed/?<%= maxId ? ("max_id=" + maxId + "&") : "" %>rank_token=<%= rankToken %>&ranked_content=true',
+    news: 'news/',
+    newsInbox: 'news/inbox/?limited_activity=true&show_su=true',
 
     topSearch: 'fbsearch/topsearch/?rank_token=<%= rankToken %>&query=<%= encodeURIComponent(query) %>&context=blended&timezone_offset=10800',
     accountsSearch: 'users/search/?is_typehead=true&q=<%= encodeURIComponent(query) %>&rank_token=<%= rankToken %>',
